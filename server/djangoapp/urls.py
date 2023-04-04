@@ -2,14 +2,19 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
+from .views import static_template_view, about_view 
+
 
 app_name = 'djangoapp'
 urlpatterns = [
     # route is a string contains a URL pattern
+    path('static-template/', static_template_view, name='static_template'),
+    path('about/', about_view, name='about'),
     # view refers to the view function
     # name the URL
 
     # path for about view
+    
 
     # path for contact us view
 
@@ -19,7 +24,7 @@ urlpatterns = [
 
     # path for logout
 
-    path(route='', view=views.get_dealerships, name='index'),
+    path(route='', view=views.get_dealerships, name='index')
 
     # path for dealer reviews view
 

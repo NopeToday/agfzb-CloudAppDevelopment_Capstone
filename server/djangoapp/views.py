@@ -15,12 +15,13 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
-
-
+def static_template_view(request):
+    return render(request, 'static_template.html')
 # Create an `about` view to render a static about page
 # def about(request):
 # ...
-
+def about_view(request):
+    return render(request, 'about.html')
 
 # Create a `contact` view to return a static contact page
 #def contact(request):
