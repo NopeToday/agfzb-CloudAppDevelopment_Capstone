@@ -41,9 +41,9 @@ def login_view(request):
         else:
             # Handle invalid login credentials
             error_message = 'Invalid username or password.'
-            return render(request, 'login.html', {'error_message': error_message})
+            return render(request, 'index.html', {'error_message': error_message})
     else:
-        return render(request, 'login.html')
+        return render(request, 'index.html')
 
 # Create a `logout_request` view to handle sign out request
 # def logout_request(request):
