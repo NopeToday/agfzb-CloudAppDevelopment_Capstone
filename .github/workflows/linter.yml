@@ -6,11 +6,11 @@ on:
   pull_request:
     branches: [master, main]
 
-jobs: # list of things to do
+jobs:
   lint_function_js:
     name: Linting JavaScript Function 
     runs-on: ubuntu-latest 
-    steps: # list of steps
+    steps:
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
@@ -26,7 +26,6 @@ jobs: # list of things to do
       - name: Code Linting
         run: npm run lint
         working-directory: functions/sample/nodejs
-    
 
   lint_function_python:
     name: Linting Python Function 
@@ -63,3 +62,4 @@ jobs: # list of things to do
       - name: Lint with Pylint
         run: pylint *.py
         working-directory: server
+
