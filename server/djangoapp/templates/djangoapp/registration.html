@@ -6,6 +6,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
     <body>
-    <!--Add a registration form here -->
+        <h1>Registration</h1>
+    <form method="post" action="{% url 'djangoapp:signup' %}">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required>
+        <br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required>
+        <br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <input type="submit" value="Sign up">
+    </form>
     </body>
 </html>
